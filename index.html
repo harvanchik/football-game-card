@@ -31,16 +31,16 @@
                 for="team"
                 x-text="isHome ? 'home' : 'visitor'"
                 class="cursor-pointer"></label>
-              <input id="team" type="text" class="input" />
+              <input id="team" type="text" />
             </div>
             <div class="flex w-2/5 flex-row space-x-1">
               <label for="color">COLOR</label>
-              <input id="color" type="text" class="input" />
+              <input id="color" type="text" class="!uppercase" />
             </div>
           </div>
           <div class="flex flex-row space-x-1">
             <label for="color">HEAD COACH</label>
-            <input id="color" type="text" class="input" />
+            <input id="color" type="text" />
           </div>
         </div>
         <!-- END: Team Info -->
@@ -68,11 +68,11 @@
               x-data="{ 
                 first_half_option: null,
                 get isDefer() { return this.first_half_option === 'defer' },
-                set isDefer(val) { this.first_half_option = 'defer' },
+                set isDefer(val) { this.first_half_option = this.first_half_option === 'defer' ? null : 'defer' },
                 get isReceive() { return this.first_half_option === 'receive' },
-                set isReceive(val) { this.first_half_option = 'receive' },
+                set isReceive(val) { this.first_half_option = this.first_half_option === 'receive' ? null : 'receive' },
                 get isDefend() { return this.first_half_option === 'defend' },
-                set isDefend(val) { this.first_half_option = 'defend' }
+                set isDefend(val) { this.first_half_option = this.first_half_option === 'defend' ? null : 'defend' }
               }"
               class="relative ml-[-2px] flex w-full flex-row items-center space-x-1 border-2 border-black p-[3px]">
               <!-- START: Options -->
@@ -91,10 +91,11 @@
                 </div>
               </div>
               <input
+                id="goal-1"
                 type="text"
-                class="input flex !w-7 text-center"
+                class="flex !w-7 text-center !uppercase"
                 maxlength="2" />
-              <span class="m-0 mb-[-1px]">GOAL</span>
+              <label for="goal-1" class="m-0 mb-[-1px]">GOAL</label>
               <!-- END: Options -->
             </div>
 
@@ -108,7 +109,7 @@
             <div
               class="relative mt-[-2px] flex w-max border-2 border-black px-[3px] py-[1px]">
               <label for="2nd-half-opt" class="flex flex-col">
-                <span class="">SECOND HALF</span>
+                <span>SECOND HALF</span>
                 <span class="ml-4">OPTION</span>
               </label>
               <input
@@ -123,9 +124,9 @@
               x-data="{ 
                 second_half_option: null,
                 get isReceive() { return this.second_half_option === 'receive' },
-                set isReceive(val) { this.second_half_option = 'receive' },
+                set isReceive(val) { this.second_half_option = this.second_half_option === 'receive' ? null : 'receive' },
                 get isDefend() { return this.second_half_option === 'defend' },
-                set isDefend(val) { this.second_half_option = 'defend' }
+                set isDefend(val) { this.second_half_option = this.second_half_option === 'defend' ? null : 'defend' }
               }"
               class="relative ml-[-2px] mt-[-2px] flex w-full flex-row items-center space-x-1 border-2 border-black p-[3px]">
               <!-- START: Options -->
@@ -139,8 +140,12 @@
                   <label for="defend-2" class="m-0 mb-[-1px]">DEFEND</label>
                 </div>
               </div>
-              <input type="text" class="input !w-7 text-center" maxlength="2" />
-              <span class="m-0 mb-[-1px]">GOAL</span>
+              <input
+                id="goal-2"
+                type="text"
+                class="!w-7 text-center !uppercase"
+                maxlength="2" />
+              <label for="goal-2" class="m-0 mb-[-1px]">GOAL</label>
               <!-- END: Options -->
             </div>
             <!-- END: Second Half Possession -->
@@ -150,35 +155,41 @@
         <!-- END: Coin Toss -->
 
         <!-- START: Team Captains -->
-        <div x-data class="flex flex-col space-y-1">
-          <template x-for="i in 2">
-            <li class="flex flex-row space-x-3">
-              <div class="flex flex-row space-x-1">
-                <label for="captain-1">CAPT.</label>
-                <input id="captain-1" type="text" class="input" />
-              </div>
-              <div class="flex flex-row space-x-1">
+        <table
+          x-data="{ captains: ['capt', 'alt', 'alt'] }"
+          class="flex flex-col space-y-1">
+          <template x-for="captain in captains">
+            <tr
+              class="flex flex-row space-x-3"
+              :class="captain === 'alt' && 'ml-3'">
+              <td class="flex flex-row space-x-1">
+                <label for="captain-1">
+                  <span x-text="captain" class="uppercase"></span>.
+                </label>
+                <input id="captain-1" type="text" />
+              </td>
+              <td class="flex flex-row space-x-1">
                 <label for="number-1">NO.</label
                 ><input
                   id="number-1"
                   type="number"
-                  class="input !w-7 text-center"
+                  class="!w-7 text-center"
                   oninput="this.value=this.value.slice(0,this.maxLength)"
                   maxlength="2"
                   min="0"
                   max="99" />
-              </div>
-              <div class="flex flex-row space-x-1">
+              </td>
+              <td class="flex flex-row space-x-1">
                 <label for="position-1">POS.</label>
                 <input
                   id="position-1"
                   type="text"
-                  class="input !w-7 appearance-none text-center"
+                  class="!w-7 text-center"
                   maxlength="2" />
-              </div>
-            </li>
+              </td>
+            </tr>
           </template>
-        </div>
+        </table>
         <!-- END: Team Captains -->
       </div>
     </section>
