@@ -10,7 +10,7 @@
   span,
   label,
   input[type='text'] {
-    @apply mt-auto select-none whitespace-nowrap font-sans text-xs font-medium uppercase leading-none;
+    @apply mt-auto font-sans text-xs font-medium leading-none uppercase select-none whitespace-nowrap;
   }
 
   input[type='text'] {

@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>TailwindCSS Static Site Template</title>
+    <title>Football Game Card</title>
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <!-- START: Scripts -->
     <script
@@ -15,7 +15,8 @@
   </head>
 
   <body>
-    <section class="flex h-screen w-full items-center justify-center">
+    <!-- START: Game Card -->
+    <section class="flex items-center justify-center w-full h-screen">
       <div
         class="flex h-[4.9in] w-[3.65in] flex-col space-y-2 rounded-xl border-2 border-black bg-gray-500/10 p-3 shadow-md">
         <!-- START: Team Info -->
@@ -23,7 +24,7 @@
           <div class="flex flex-row space-x-3">
             <div
               x-data="{ isHome: true }"
-              class="flex w-3/5 flex-row space-x-1">
+              class="flex flex-row w-3/5 space-x-1">
               <label
                 @click="isHome = !isHome"
                 for="team"
@@ -31,7 +32,7 @@
                 class="cursor-pointer"></label>
               <input id="team" type="text" class="input" />
             </div>
-            <div class="flex w-2/5 flex-row space-x-1">
+            <div class="flex flex-row w-2/5 space-x-1">
               <label for="color">COLOR</label>
               <input id="color" type="text" class="input" />
             </div>
@@ -44,7 +45,7 @@
         <!-- END: Team Info -->
 
         <!-- START: Coin Toss -->
-        <div class="flex w-full flex-col">
+        <div class="flex flex-col w-full">
           <!-- START: First Row -->
           <div class="flex flex-row">
             <!-- START: Won Toss -->
@@ -127,7 +128,7 @@
               }"
               class="relative ml-[-2px] mt-[-2px] flex w-full flex-row items-center space-x-1 border-2 border-black p-[3px]">
               <!-- START: Options -->
-              <div class="5 item-center flex flex-row space-x-2">
+              <div class="flex flex-row space-x-2 5 item-center">
                 <div class="flex flex-row items-center space-x-1">
                   <input id="receive-2" type="checkbox" x-model="isReceive" />
                   <label for="receive-2" class="m-0 mb-[-1px]">RECEIVE</label>
@@ -146,7 +147,37 @@
           <!-- START: Second Row -->
         </div>
         <!-- END: Coin Toss -->
+
+        <!-- START: Team Captains -->
+        <div x-data class="flex flex-col space-y-1">
+          <template x-for="i in 2">
+            <li class="flex flex-row space-x-3">
+              <div class="flex flex-row space-x-1">
+                <label for="captain-1">CAPT.</label>
+                <input id="captain-1" type="text" class="input" />
+              </div>
+              <div class="flex flex-row space-x-1">
+                <label for="number-1">NO.</label>
+                <input
+                  id="number-1"
+                  type="text"
+                  class="input !w-7 appearance-none text-center"
+                  maxlength="2" />
+              </div>
+              <div class="flex flex-row space-x-1">
+                <label for="position-1">POS.</label>
+                <input
+                  id="position-1"
+                  type="text"
+                  class="input !w-7 text-center"
+                  maxlength="2" />
+              </div>
+            </li>
+          </template>
+        </div>
+        <!-- END: Team Captains -->
       </div>
     </section>
+    <!-- END: Game Card -->
   </body>
 </html>
