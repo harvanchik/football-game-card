@@ -604,6 +604,7 @@ h2,
 
 input[type='text'],
   input[type='number']{
+  margin-top: 0px;
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1005,8 +1006,8 @@ input::-webkit-outer-spin-button,
   margin-top: -2px;
 }
 
-.ml-3{
-  margin-left: 0.75rem;
+.ml-auto{
+  margin-left: auto;
 }
 
 .mt-2{
@@ -1027,6 +1028,18 @@ input::-webkit-outer-spin-button,
 
 .mt-0{
   margin-top: 0px;
+}
+
+.ml-1{
+  margin-left: 0.25rem;
+}
+
+.ml-0\.5{
+  margin-left: 0.125rem;
+}
+
+.ml-0{
+  margin-left: 0px;
 }
 
 .block{
@@ -1086,6 +1099,14 @@ input::-webkit-outer-spin-button,
   width: 1.75rem !important;
 }
 
+.w-\[4rem\]{
+  width: 4rem;
+}
+
+.\!w-10{
+  width: 2.5rem !important;
+}
+
 .max-w-xl{
   max-width: 36rem;
 }
@@ -1096,6 +1117,10 @@ input::-webkit-outer-spin-button,
 
 .max-w-4xl{
   max-width: 56rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
 }
 
 .scale-\[1\.8\]{
@@ -1311,12 +1336,12 @@ input::-webkit-outer-spin-button,
   font-weight: 700;
 }
 
-.\!uppercase{
-  text-transform: uppercase !important;
-}
-
 .uppercase{
   text-transform: uppercase;
+}
+
+.\!uppercase{
+  text-transform: uppercase !important;
 }
 
 .text-gray-900{

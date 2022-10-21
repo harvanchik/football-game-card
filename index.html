@@ -156,24 +156,24 @@
 
         <!-- START: Team Captains -->
         <table
-          x-data="{ captains: ['capt', 'alt', 'alt'] }"
+          x-data="{ captains: ['cap', 'alt', 'alt'] }"
           class="flex flex-col space-y-1">
           <template x-for="captain in captains">
             <tr
-              class="flex flex-row space-x-3"
-              :class="captain === 'alt' && 'ml-3'">
+              class="flex flex-row space-x-2"
+              :class="captain === 'alt' && 'ml-0.5'">
               <td class="flex flex-row space-x-1">
                 <label for="captain-1">
                   <span x-text="captain" class="uppercase"></span>.
                 </label>
-                <input id="captain-1" type="text" />
+                <input id="captain-1" type="text" class="flex-1" />
               </td>
               <td class="flex flex-row space-x-1">
                 <label for="number-1">NO.</label
                 ><input
                   id="number-1"
                   type="number"
-                  class="!w-7 text-center"
+                  class="!w-10 text-center"
                   oninput="this.value=this.value.slice(0,this.maxLength)"
                   maxlength="2"
                   min="0"
@@ -184,7 +184,7 @@
                 <input
                   id="position-1"
                   type="text"
-                  class="!w-7 text-center"
+                  class="!w-10 text-center"
                   maxlength="2" />
               </td>
             </tr>
