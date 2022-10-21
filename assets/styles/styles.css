@@ -602,8 +602,12 @@ h2,
   line-height: 1;
 }
 
-input[type='text']{
+input[type='text'],
+  input[type='number']{
   width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-width: 0px;
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
@@ -620,45 +624,50 @@ input[type='text']{
   line-height: 1;
 }
 
-input[type='text']::-moz-placeholder{
+input[type='text']::-moz-placeholder, input[type='number']::-moz-placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(255 255 255 / var(--tw-placeholder-opacity));
 }
 
-input[type='text']::placeholder{
+input[type='text']::placeholder,
+  input[type='number']::placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(255 255 255 / var(--tw-placeholder-opacity));
 }
 
-input[type='text']{
+input[type='text'],
+  input[type='number']{
   caret-color: #9ca3af;
 }
 
-input[type='text'] *::-moz-selection{
+input[type='text'] *::-moz-selection, input[type='number'] *::-moz-selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-input[type='text'] *::selection{
+input[type='text'] *::selection,
+  input[type='number'] *::selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-input[type='text']::-moz-selection{
+input[type='text']::-moz-selection, input[type='number']::-moz-selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-input[type='text']::selection{
+input[type='text']::selection,
+  input[type='number']::selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-input[type='text']:focus-within{
+input[type='text']:focus-within,
+  input[type='number']:focus-within{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
@@ -669,6 +678,9 @@ input[type='text']:focus-within{
 input[type='checkbox']{
   height: 0.625rem;
   width: 0.625rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 input[type='checkbox']:checked{
@@ -703,6 +715,9 @@ input[type='checkbox']:checked:focus{
 input[type='radio']{
   height: 0.625rem;
   width: 0.625rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 input[type='radio']:checked{
@@ -1361,6 +1376,20 @@ input[type='radio']:checked:focus{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .focus\:border-indigo-300:focus{
