@@ -1,8 +1,14 @@
+const sans = require('tailwindcss/defaultTheme').fontFamily.sans;
+
 module.exports = {
   content: ['./**/*.html'],
   darkMode: 'class', // 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['Roboto', sans],
+      },
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 };
