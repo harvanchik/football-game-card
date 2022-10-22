@@ -1,4 +1,4 @@
-const sans = require('tailwindcss/defaultTheme').fontFamily.sans;
+const def = require('tailwindcss/defaultTheme').fontFamily;
 
 module.exports = {
   content: ['./**/*.html'],
@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Roboto', sans],
+        sans: ['Roboto', def.sans],
+        mono: ['Roboto Mono', def.mono],
       },
     },
   },

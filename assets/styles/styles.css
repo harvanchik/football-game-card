@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap');
 
 /*
 ! tailwindcss v3.2.0 | MIT License | https://tailwindcss.com
@@ -125,7 +125,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Roboto Mono, ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -667,6 +667,12 @@ input[type='text']::selection,
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+input[type='text']:invalid,
+  input[type='number']:invalid{
+  --tw-border-opacity: 1;
+  border-color: rgb(220 38 38 / var(--tw-border-opacity));
+}
+
 input[type='text']:focus-within,
   input[type='number']:focus-within{
   --tw-border-opacity: 1;
@@ -1006,8 +1012,16 @@ input::-webkit-outer-spin-button,
   margin-top: -2px;
 }
 
-.ml-auto{
-  margin-left: auto;
+.ml-0\.5{
+  margin-left: 0.125rem;
+}
+
+.ml-0{
+  margin-left: 0px;
+}
+
+.mt-auto{
+  margin-top: auto;
 }
 
 .mt-2{
@@ -1028,18 +1042,6 @@ input::-webkit-outer-spin-button,
 
 .mt-0{
   margin-top: 0px;
-}
-
-.ml-1{
-  margin-left: 0.25rem;
-}
-
-.ml-0\.5{
-  margin-left: 0.125rem;
-}
-
-.ml-0{
-  margin-left: 0px;
 }
 
 .block{
@@ -1070,6 +1072,10 @@ input::-webkit-outer-spin-button,
   height: 4.9in;
 }
 
+.\!h-4{
+  height: 1rem !important;
+}
+
 .h-24{
   height: 6rem;
 }
@@ -1097,10 +1103,6 @@ input::-webkit-outer-spin-button,
 
 .\!w-7{
   width: 1.75rem !important;
-}
-
-.w-\[4rem\]{
-  width: 4rem;
 }
 
 .\!w-10{
@@ -1199,6 +1201,12 @@ input::-webkit-outer-spin-button,
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]){
@@ -1313,8 +1321,20 @@ input::-webkit-outer-spin-button,
   padding-right: 0px;
 }
 
+.pt-\[3px\]{
+  padding-top: 3px;
+}
+
+.pb-\[2px\]{
+  padding-bottom: 2px;
+}
+
 .text-center{
   text-align: center;
+}
+
+.font-mono{
+  font-family: Roboto Mono, ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 .text-4xl{
@@ -1332,6 +1352,10 @@ input::-webkit-outer-spin-button,
   line-height: 2rem;
 }
 
+.font-medium{
+  font-weight: 500;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1342,6 +1366,10 @@ input::-webkit-outer-spin-button,
 
 .\!uppercase{
   text-transform: uppercase !important;
+}
+
+.tracking-tighter{
+  letter-spacing: -0.05em;
 }
 
 .text-gray-900{
