@@ -133,25 +133,27 @@
                 get isDefend() { return this.second_half_option === 'defend' },
                 set isDefend(val) { this.second_half_option = this.second_half_option === 'defend' ? null : 'defend' }
               }"
-              class="relative ml-[-2px] mt-[-2px] flex w-full flex-row items-center space-x-1 border-2 border-black p-[3px]">
+              class="relative ml-[-2px] mt-[-2px] flex w-full border-2 border-black p-[3px]">
               <!-- START: Options -->
-              <div class="5 item-center flex flex-row space-x-2">
-                <div class="flex flex-row items-center space-x-1">
-                  <input id="receive-2" type="checkbox" x-model="isReceive" />
-                  <label for="receive-2" class="m-0 mb-[-1px]">RECEIVE</label>
+              <div class="mx-auto flex w-max flex-row items-center space-x-1">
+                <div class="5 item-center flex flex-row space-x-2">
+                  <div class="flex flex-row items-center space-x-1">
+                    <input id="receive-2" type="checkbox" x-model="isReceive" />
+                    <label for="receive-2" class="m-0 mb-[-1px]">RECEIVE</label>
+                  </div>
+                  <div class="flex flex-row items-center space-x-1">
+                    <input id="defend-2" type="checkbox" x-model="isDefend" />
+                    <label for="defend-2" class="m-0 mb-[-1px]">DEFEND</label>
+                  </div>
                 </div>
-                <div class="flex flex-row items-center space-x-1">
-                  <input id="defend-2" type="checkbox" x-model="isDefend" />
-                  <label for="defend-2" class="m-0 mb-[-1px]">DEFEND</label>
-                </div>
+                <input
+                  id="goal-2"
+                  type="text"
+                  spellcheck="false"
+                  class="!w-7 text-center !uppercase"
+                  maxlength="2" />
+                <label for="goal-2" class="m-0 mb-[-1px]">GOAL</label>
               </div>
-              <input
-                id="goal-2"
-                type="text"
-                spellcheck="false"
-                class="!w-7 text-center !uppercase"
-                maxlength="2" />
-              <label for="goal-2" class="m-0 mb-[-1px]">GOAL</label>
               <!-- END: Options -->
             </div>
             <!-- END: Second Half Possession -->
