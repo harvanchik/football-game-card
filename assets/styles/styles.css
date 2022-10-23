@@ -1515,6 +1515,14 @@ input::-webkit-outer-spin-button,
   text-transform: lowercase;
 }
 
+.normal-case{
+  text-transform: none;
+}
+
+.\!normal-case{
+  text-transform: none !important;
+}
+
 .tracking-tighter{
   letter-spacing: -0.05em;
 }
