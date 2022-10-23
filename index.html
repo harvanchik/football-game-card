@@ -160,7 +160,7 @@
           class="flex flex-col space-y-1">
           <template x-for="captain in captains">
             <tr
-              class="flex flex-row space-x-2"
+              class="flex flex-row space-x-1"
               :class="captain === 'alt' && 'ml-0.5'"
               :style="captain === 'cap' && { marginTop: 0 }">
               <td class="flex flex-row space-x-1">
@@ -270,7 +270,7 @@
           </div>
           <!-- END: Date and Times -->
 
-          <!-- START: Special Conditions -->
+          <!-- START: Game Notes -->
           <div class="flex flex-row space-x-1">
             <label for="date"
               >GAME <br />
@@ -278,9 +278,38 @@
             >
             <textarea id="date" class="!h-[3.25rem] resize-none"></textarea>
           </div>
-          <!-- END: Special Conditions -->
+          <!-- END: Game Notes -->
         </div>
         <!-- END: Game Information -->
+
+        <!-- START: Scoring Record -->
+        <div class="flex flex-col space-y-1">
+          <h2 class="mx-auto w-max text-[10px] font-semibold">
+            SCORING RECORD
+          </h2>
+          <div class="flex flex-row">
+            <div class="grid w-full grid-cols-2 grid-rows-2">
+              <div class="relative h-8 border-2 border-black">
+                <span class="absolute top-0.5 left-0.5 text-[8px]">1ST</span>
+              </div>
+              <div class="relative h-8 border-2 border-l-0 border-black">
+                <span class="absolute top-0.5 left-0.5 text-[8px]">2ND</span>
+              </div>
+              <div class="relative h-8 border-2 border-t-0 border-black">
+                <span class="absolute top-0.5 left-0.5 text-[8px]">3RD</span>
+              </div>
+              <div
+                class="relative h-8 border-2 border-l-0 border-t-0 border-black">
+                <span class="absolute top-0.5 left-0.5 text-[8px]">4TH</span>
+              </div>
+            </div>
+            <div
+              class="relative flex h-16 w-12 border-2 border-l-0 border-black">
+              <span class="absolute top-0.5 left-[3px]">FINAL</span>
+            </div>
+          </div>
+        </div>
+        <!-- END: Scoring Record -->
       </div>
     </section>
     <!-- END: Game Card -->
