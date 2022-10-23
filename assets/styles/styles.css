@@ -1083,14 +1083,6 @@ input::-webkit-outer-spin-button,
   margin-top: -2px;
 }
 
-.ml-0\.5{
-  margin-left: 0.125rem;
-}
-
-.ml-0{
-  margin-left: 0px;
-}
-
 .mt-auto{
   margin-top: auto;
 }
@@ -1725,6 +1717,14 @@ input::-webkit-outer-spin-button,
 @media (min-width: 1024px){
   .lg\:mt-0{
     margin-top: 0px;
+  }
+
+  .lg\:h-\[4\.9in\]{
+    height: 4.9in;
+  }
+
+  .lg\:w-\[3\.65in\]{
+    width: 3.65in;
   }
 
   .lg\:scale-\[1\.8\]{
