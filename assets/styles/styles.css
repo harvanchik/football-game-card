@@ -764,6 +764,21 @@ input::-webkit-outer-spin-button,
   margin: 0;
 }
 
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1132,8 +1147,8 @@ input::-webkit-outer-spin-button,
   height: 1rem !important;
 }
 
-.\!h-\[3\.25rem\]{
-  height: 3.25rem !important;
+.\!h-10{
+  height: 2.5rem !important;
 }
 
 .h-8{
