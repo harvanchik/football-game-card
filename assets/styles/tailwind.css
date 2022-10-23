@@ -16,7 +16,7 @@
   input[type='text'],
   input[type='number'],
   textarea {
-    @apply mt-0 w-full appearance-none border-0 border-b-2 border-black p-0 px-1 pt-[1px] font-sans text-xs font-normal capitalize leading-none placeholder-white caret-gray-400 selection:bg-indigo-500/80 selection:text-white invalid:border-red-600  focus-within:ring-0;
+    @apply mt-0 w-full appearance-none border-0 border-b-2 border-black bg-transparent p-0 px-1 pt-[1px] font-sans text-xs font-normal capitalize leading-none placeholder-white caret-gray-400 selection:bg-indigo-500/80 selection:text-white invalid:border-red-600  focus-within:ring-0;
     -moz-appearance: textfield;
   }
 
