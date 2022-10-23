@@ -31,16 +31,20 @@
                 for="team"
                 x-text="isHome ? 'home' : 'visitor'"
                 class="cursor-pointer uppercase"></label>
-              <input id="team" type="text" />
+              <input id="team" type="text" spellcheck="false" />
             </div>
             <div class="flex w-2/5 flex-row space-x-1">
               <label for="color">COLOR</label>
-              <input id="color" type="text" class="!uppercase" />
+              <input
+                id="color"
+                type="text"
+                spellcheck="false"
+                class="!uppercase" />
             </div>
           </div>
           <div class="flex flex-row space-x-1">
             <label for="color">HEAD COACH</label>
-            <input id="color" type="text" />
+            <input id="color" type="text" spellcheck="false" />
           </div>
         </div>
         <!-- END: Team Info -->
@@ -93,6 +97,7 @@
               <input
                 id="goal-1"
                 type="text"
+                spellcheck="false"
                 class="flex !w-7 text-center !uppercase"
                 maxlength="2" />
               <label for="goal-1" class="m-0 mb-[-1px]">GOAL</label>
@@ -143,6 +148,7 @@
               <input
                 id="goal-2"
                 type="text"
+                spellcheck="false"
                 class="!w-7 text-center !uppercase"
                 maxlength="2" />
               <label for="goal-2" class="m-0 mb-[-1px]">GOAL</label>
@@ -167,7 +173,11 @@
                 <label for="captain-1">
                   <span x-text="captain" class="uppercase"></span>.
                 </label>
-                <input id="captain-1" type="text" class="flex-1" />
+                <input
+                  id="captain-1"
+                  type="text"
+                  spellcheck="false"
+                  class="flex-1" />
               </td>
               <td class="flex flex-row space-x-1">
                 <label for="number-1">NO.</label
@@ -185,6 +195,7 @@
                 <input
                   id="position-1"
                   type="text"
+                  spellcheck="false"
                   class="!w-10 text-center !uppercase"
                   maxlength="2" />
               </td>
@@ -209,6 +220,7 @@
                 <input
                   type="text"
                   pattern="[0-9]{1,2}:[0-9]{2}"
+                  spellcheck="false"
                   class="!h-4 text-center"
                   maxlength="5" />
               </template>
@@ -227,6 +239,7 @@
                 <input
                   type="text"
                   pattern="[0-9]{1,2}:[0-9]{2}"
+                  spellcheck="false"
                   class="!h-4 text-center"
                   maxlength="5" />
               </template>
@@ -248,6 +261,7 @@
                   id="date"
                   type="text"
                   pattern="^(([0-9])|([0-2][0-9])|([3][0-1])) (JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC) \d{4}$"
+                  spellcheck="false"
                   class="!w-[5rem] !uppercase" />
               </div>
               <div class="flex flex-row space-x-1">
@@ -256,6 +270,7 @@
                   id="start"
                   type="text"
                   pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
+                  spellcheck="false"
                   class="text-center !uppercase" />
               </div>
               <div class="flex flex-row space-x-1">
@@ -264,6 +279,7 @@
                   id="end"
                   type="text"
                   pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
+                  spellcheck="false"
                   class="text-center !uppercase" />
               </div>
             </div>
@@ -278,7 +294,6 @@
             >
             <textarea
               id="date"
-              spellcheck="false"
               class="!h-[3.25rem] resize-none !normal-case"></textarea>
           </div>
           <!-- END: Game Notes -->
