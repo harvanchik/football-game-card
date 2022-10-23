@@ -1351,6 +1351,10 @@ input::-webkit-outer-spin-button,
   border-width: 0px;
 }
 
+.\!border-0{
+  border-width: 0px !important;
+}
+
 .border-l-0{
   border-left-width: 0px;
 }
@@ -1454,6 +1458,14 @@ input::-webkit-outer-spin-button,
 
 .pb-\[2px\]{
   padding-bottom: 2px;
+}
+
+.pl-0\.5{
+  padding-left: 0.125rem;
+}
+
+.pl-0{
+  padding-left: 0px;
 }
 
 .text-center{
@@ -1728,6 +1740,14 @@ input::-webkit-outer-spin-button,
 }
 
 @media (min-width: 1024px){
+  .lg\:mt-10{
+    margin-top: 2.5rem;
+  }
+
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+
   .lg\:h-\[4\.9in\]{
     height: 4.9in;
   }

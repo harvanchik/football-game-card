@@ -17,7 +17,7 @@
 
   <body class="">
     <!-- START: Game Card -->
-    <section class="mx-auto mt-10 flex h-screen w-max lg:items-center">
+    <section class="mx-auto mt-10 flex h-screen w-max lg:mt-0 lg:items-center">
       <div
         class="flex max-h-[4.9in] max-w-[3.65in] flex-col space-y-1.5 rounded-xl border-2 border-black bg-gray-500/10 p-3 shadow-lg print:scale-100 print:shadow-none lg:scale-[1.8]">
         <!-- START: Team Info -->
@@ -175,7 +175,7 @@
                   id="number-1"
                   type="number"
                   class="!w-10 text-center"
-                  oninput="this.value=this.value.slice(0,this.maxLength)"
+                  oninput="this.value = this.value.slice(0,this.maxLength)"
                   maxlength="2"
                   min="0"
                   max="99" />
@@ -291,32 +291,83 @@
           <div class="flex flex-row">
             <div class="grid w-full grid-cols-2 grid-rows-2">
               <div class="relative h-8 border-2 border-black bg-white">
-                <span class="absolute top-0.5 left-0.5 font-mono text-[8px]"
-                  >1ST</span
+                <label
+                  for="first"
+                  class="absolute top-0.5 left-0.5 font-mono text-[8px]">
+                  1ST</label
                 >
+                <input
+                  id="first"
+                  type="number"
+                  class="!border-0 pl-0.5 text-center"
+                  oninput="this.value = this.value.slice(0,this.maxLength)"
+                  maxlength="3"
+                  min="0"
+                  max="999" />
               </div>
               <div
                 class="relative h-8 border-2 border-l-0 border-black bg-white">
-                <span class="absolute top-0.5 left-0.5 font-mono text-[8px]"
-                  >2ND</span
+                <label
+                  for="second"
+                  class="absolute top-0.5 left-0.5 font-mono text-[8px]">
+                  2ND</label
                 >
+                <input
+                  id="second"
+                  type="number"
+                  class="!border-0 pl-0.5 text-center"
+                  oninput="this.value = this.value.slice(0,this.maxLength)"
+                  maxlength="3"
+                  min="0"
+                  max="999" />
               </div>
               <div
                 class="relative h-8 border-2 border-t-0 border-black bg-white">
-                <span class="absolute top-0.5 left-0.5 font-mono text-[8px]"
-                  >3RD</span
+                <label
+                  for="third"
+                  class="absolute top-0.5 left-0.5 font-mono text-[8px]">
+                  3RD</label
                 >
+                <input
+                  id="third"
+                  type="number"
+                  class="!border-0 pl-0.5 text-center"
+                  oninput="this.value = this.value.slice(0,this.maxLength)"
+                  maxlength="3"
+                  min="0"
+                  max="999" />
               </div>
               <div
                 class="relative h-8 border-2 border-l-0 border-t-0 border-black bg-white">
-                <span class="absolute top-0.5 left-0.5 font-mono text-[8px]"
-                  >4TH</span
+                <label
+                  for="fourth"
+                  class="absolute top-0.5 left-0.5 font-mono text-[8px]">
+                  4TH</label
                 >
+                <input
+                  id="fourth"
+                  type="number"
+                  class="!border-0 pl-0.5 text-center"
+                  oninput="this.value = this.value.slice(0,this.maxLength)"
+                  maxlength="3"
+                  min="0"
+                  max="999" />
               </div>
             </div>
             <div
               class="relative flex h-16 w-12 border-2 border-l-0 border-black bg-white">
-              <span class="absolute top-0.5 left-[3px]">FINAL</span>
+              <label for="final-score" class="absolute top-0.5 left-[3px]">
+                FINAL</label
+              >
+              <input
+                id="final-score"
+                type="number"
+                class="!border-0 pl-0.5 text-center"
+                :placeholder="final_score"
+                oninput="this.value = this.value.slice(0,this.maxLength)"
+                maxlength="3"
+                min="0"
+                max="999" />
             </div>
           </div>
         </div>
