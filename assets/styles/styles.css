@@ -1111,6 +1111,18 @@ input::-webkit-outer-spin-button,
   margin-top: 0px;
 }
 
+.-ml-2{
+  margin-left: -0.5rem;
+}
+
+.\!-ml-2{
+  margin-left: -0.5rem !important;
+}
+
+.\!-ml-1{
+  margin-left: -0.25rem !important;
+}
+
 .block{
   display: block;
 }
