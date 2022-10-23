@@ -603,7 +603,8 @@ h2,
 }
 
 input[type='text'],
-  input[type='number']{
+  input[type='number'],
+  textarea{
   margin-top: 0px;
   width: 100%;
   -webkit-appearance: none;
@@ -625,56 +626,62 @@ input[type='text'],
   line-height: 1;
 }
 
-input[type='text']::-moz-placeholder, input[type='number']::-moz-placeholder{
+input[type='text']::-moz-placeholder, input[type='number']::-moz-placeholder, textarea::-moz-placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(255 255 255 / var(--tw-placeholder-opacity));
 }
 
 input[type='text']::placeholder,
-  input[type='number']::placeholder{
+  input[type='number']::placeholder,
+  textarea::placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(255 255 255 / var(--tw-placeholder-opacity));
 }
 
 input[type='text'],
-  input[type='number']{
+  input[type='number'],
+  textarea{
   caret-color: #9ca3af;
 }
 
-input[type='text'] *::-moz-selection, input[type='number'] *::-moz-selection{
+input[type='text'] *::-moz-selection, input[type='number'] *::-moz-selection, textarea *::-moz-selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 input[type='text'] *::selection,
-  input[type='number'] *::selection{
+  input[type='number'] *::selection,
+  textarea *::selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-input[type='text']::-moz-selection, input[type='number']::-moz-selection{
+input[type='text']::-moz-selection, input[type='number']::-moz-selection, textarea::-moz-selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 input[type='text']::selection,
-  input[type='number']::selection{
+  input[type='number']::selection,
+  textarea::selection{
   background-color: rgb(99 102 241 / 0.8);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 input[type='text']:invalid,
-  input[type='number']:invalid{
+  input[type='number']:invalid,
+  textarea:invalid{
   --tw-border-opacity: 1;
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 
 input[type='text']:focus-within,
-  input[type='number']:focus-within{
+  input[type='number']:focus-within,
+  textarea:focus-within{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
@@ -683,7 +690,8 @@ input[type='text']:focus-within,
 }
 
 input[type='text'],
-  input[type='number'] {
+  input[type='number'],
+  textarea {
   -moz-appearance: textfield;
 }
 
@@ -1044,6 +1052,10 @@ input::-webkit-outer-spin-button,
   margin-top: 0px;
 }
 
+.\!mt-0{
+  margin-top: 0px !important;
+}
+
 .block{
   display: block;
 }
@@ -1076,8 +1088,20 @@ input::-webkit-outer-spin-button,
   height: 1rem !important;
 }
 
+.\!h-14{
+  height: 3.5rem !important;
+}
+
 .h-24{
   height: 6rem;
+}
+
+.\!h-12{
+  height: 3rem !important;
+}
+
+.\!h-\[3\.25rem\]{
+  height: 3.25rem !important;
 }
 
 .w-full{
@@ -1109,6 +1133,10 @@ input::-webkit-outer-spin-button,
   width: 2.5rem !important;
 }
 
+.\!w-\[5rem\]{
+  width: 5rem !important;
+}
+
 .max-w-xl{
   max-width: 36rem;
 }
@@ -1133,6 +1161,10 @@ input::-webkit-outer-spin-button,
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.resize-none{
+  resize: none;
 }
 
 .grid-cols-1{
@@ -1213,6 +1245,12 @@ input::-webkit-outer-spin-button,
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]){
@@ -1423,6 +1461,10 @@ input::-webkit-outer-spin-button,
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.first\:mt-0:first-child{
+  margin-top: 0px;
+}
+
 .focus\:border-indigo-300:focus{
   --tw-border-opacity: 1;
   border-color: rgb(165 180 252 / var(--tw-border-opacity));
@@ -1518,4 +1560,12 @@ input::-webkit-outer-spin-button,
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.\[\&\:nth-child\(3\)\]\:mt-0:nth-child(3){
+  margin-top: 0px;
+}
+
+.\[\&\:nth-child\(2\)\]\:mt-0:nth-child(2){
+  margin-top: 0px;
 }

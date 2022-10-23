@@ -234,6 +234,52 @@
           <!-- END: Second Half Timeouts -->
         </div>
         <!-- END: Timeouts -->
+
+        <!-- START: Game Information -->
+        <div
+          class="flex flex-col space-y-2 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
+          <!-- START: Date and Times -->
+          <div class="flex flex-col space-y-1">
+            <div class="flex flex-row space-x-1">
+              <div class="flex flex-row space-x-1">
+                <label for="date">DATE</label>
+                <input
+                  id="date"
+                  type="text"
+                  pattern="^(([0-9])|([0-2][0-9])|([3][0-1])) (JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC) \d{4}$"
+                  class="!w-[5rem] !uppercase" />
+              </div>
+              <div class="flex flex-row space-x-1">
+                <label for="start">START</label>
+                <input
+                  id="start"
+                  type="text"
+                  pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
+                  class="text-center !uppercase" />
+              </div>
+              <div class="flex flex-row space-x-1">
+                <label for="end">END</label>
+                <input
+                  id="end"
+                  type="text"
+                  pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
+                  class="text-center !uppercase" />
+              </div>
+            </div>
+          </div>
+          <!-- END: Date and Times -->
+
+          <!-- START: Special Conditions -->
+          <div class="flex flex-row space-x-1">
+            <label for="date"
+              >GAME <br />
+              NOTES</label
+            >
+            <textarea id="date" class="!h-[3.25rem] resize-none"></textarea>
+          </div>
+          <!-- END: Special Conditions -->
+        </div>
+        <!-- END: Game Information -->
       </div>
     </section>
     <!-- END: Game Card -->
