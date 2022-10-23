@@ -302,7 +302,7 @@
         <!-- END: Game Information -->
 
         <!-- START: Scoring Record -->
-        <div class="flex flex-col space-y-1">
+        <div class="flex flex-col space-y-0.5">
           <h2 class="mx-auto w-max">SCORING SUMMARY</h2>
           <div class="flex flex-row">
             <div class="grid w-full grid-cols-2 grid-rows-2">
@@ -395,7 +395,9 @@
           class="flex flex-col space-y-3 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
           <div class="flex flex-row space-x-1 font-mono font-medium">
             <h2>UNSPORTSMANLIKES</h2>
-            <div class="mt-auto flex flex-row space-x-2">
+            <div
+              class="mt-auto flex w-full flex-row space-x-2"
+              style="margin-right: 0.5rem">
               <template x-for="i in 4">
                 <input
                   type="number"
