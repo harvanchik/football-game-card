@@ -387,6 +387,28 @@
         </div>
         <!-- END: Scoring Record -->
 
+        <!-- START: Unsportsmanlike Conducts -->
+        <div
+          x-data
+          class="flex flex-col space-y-3 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
+          <div class="flex flex-row space-x-1 font-mono font-medium">
+            <h2>UNSPORTSMANLIKES</h2>
+            <div class="mt-auto flex flex-row space-x-2">
+              <template x-for="i in 4">
+                <input
+                  type="number"
+                  spellcheck="false"
+                  class="!h-4 text-center"
+                  oninput="this.value = this.value.slice(0,this.maxLength)"
+                  maxlength="2"
+                  min="0"
+                  max="99" />
+              </template>
+            </div>
+          </div>
+        </div>
+        <!-- END: Unsportsmanlike Conducts -->
+
         <!-- START: Credit -->
         <h3 class="mx-auto !mt-[1.125rem] flex w-max flex-col space-y-0.5">
           <span class="text-[8px] font-medium uppercase">
