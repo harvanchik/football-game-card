@@ -1128,6 +1128,18 @@ input::-webkit-outer-spin-button,
   margin-top: 1rem !important;
 }
 
+.\!mt-5{
+  margin-top: 1.25rem !important;
+}
+
+.\!mt-\[1\.25rem\]{
+  margin-top: 1.25rem !important;
+}
+
+.\!mt-\[1\.125rem\]{
+  margin-top: 1.125rem !important;
+}
+
 .block{
   display: block;
 }
@@ -1582,6 +1594,14 @@ input::-webkit-outer-spin-button,
 
 .text-\[8px\]{
   font-size: 8px;
+}
+
+.text-\[6px\]{
+  font-size: 6px;
+}
+
+.text-\[7px\]{
+  font-size: 7px;
 }
 
 .font-medium{
