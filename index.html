@@ -18,7 +18,7 @@
     <!-- END: Scripts -->
   </head>
 
-  <body>
+  <body class="relative">
     <!-- START: Game Card -->
     <section
       class="mx-auto mt-10 flex w-max lg:mt-0 lg:h-screen lg:items-center">
@@ -431,5 +431,14 @@
       </div>
     </section>
     <!-- END: Game Card -->
+
+    <!-- START: Download Game Cards PDF Button -->
+    <a
+      href="./assets/img/game-cards.pdf"
+      download
+      class="absolute right-0 bottom-0 m-5 hidden h-12 w-12 rounded-xl bg-black/20 transition-colors duration-150 hover:bg-black/40 lg:block">
+      <img src="./assets/img/svg/printer.svg" alt="printer" class="p-1.5" />
+    </a>
+    <!-- END: Download Game Cards PDF Button -->
   </body>
 </html>
