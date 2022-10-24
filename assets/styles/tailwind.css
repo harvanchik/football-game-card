@@ -16,12 +16,12 @@
   input[type='text'],
   input[type='number'],
   textarea {
-    @apply mt-0 w-full appearance-none border-0 border-b-2 border-black bg-white p-0 px-1 pt-[1px] font-sans text-xs font-normal capitalize leading-none placeholder-white caret-gray-400 selection:bg-indigo-500/80 selection:text-white invalid:border-red-600 focus-within:ring-0 focus:border-indigo-600  focus:invalid:border-red-700;
+    @apply mt-0 w-full appearance-none border-0 border-b-2 border-black bg-white p-0 px-1 pt-[1px] font-sans text-xs font-normal capitalize leading-none placeholder-white caret-gray-400 transition-colors duration-150 selection:bg-indigo-500/80 selection:text-white invalid:border-red-600 focus-within:ring-0 focus:border-indigo-600  focus:invalid:border-red-700;
     -moz-appearance: textfield;
   }
 
   input[type='checkbox'] {
-    @apply h-2.5 w-2.5 appearance-none checked:bg-indigo-500 focus-within:border-indigo-600 checked:focus-within:bg-indigo-600 hover:bg-gray-300 checked:hover:bg-indigo-600 focus:bg-gray-200 focus:ring-0 focus:ring-offset-0 focus:checked:bg-indigo-600;
+    @apply h-2.5 w-2.5 appearance-none transition-colors duration-150 checked:bg-indigo-500 focus-within:border-indigo-600 checked:focus-within:bg-indigo-600 hover:bg-gray-300 checked:hover:bg-indigo-600 focus:bg-gray-200 focus:ring-0 focus:ring-offset-0 focus:checked:bg-indigo-600;
   }
 
   /* Chrome, Safari, Edge, Opera */
