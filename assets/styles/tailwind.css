@@ -15,7 +15,7 @@
 
   /* make label text color grey when input is disabled */
   input[type='checkbox']:disabled + label {
-    @apply text-gray-600 print:text-black;
+    @apply text-gray-600/80 print:text-black;
   }
 
   input[type='text'],
@@ -26,7 +26,7 @@
   }
 
   input[type='checkbox'] {
-    @apply h-2.5 w-2.5 appearance-none transition-colors duration-150 checked:bg-indigo-500 focus-within:border-indigo-600 checked:focus-within:bg-indigo-600 hover:bg-gray-300 checked:hover:bg-indigo-600 focus:bg-gray-200 focus:ring-0 focus:ring-offset-0 focus:checked:bg-indigo-600 disabled:bg-gray-400/80 print:disabled:bg-white;
+    @apply h-2.5 w-2.5 appearance-none transition-colors duration-150 checked:bg-indigo-500 focus-within:border-indigo-600 checked:focus-within:bg-indigo-600 hover:bg-gray-300 checked:hover:bg-indigo-600 focus:bg-gray-200 focus:ring-0 focus:ring-offset-0 focus:checked:bg-indigo-600 disabled:bg-gray-400/70 print:disabled:bg-white;
   }
 
   /* Chrome, Safari, Edge, Opera */
