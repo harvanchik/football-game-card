@@ -9,3 +9,5 @@
 ## About
 
 As a football official for my Intramural Sports program at my universtiy, I found that many things needed to be recorded during any given game.  Often times, it can become overwhelming to remember everything.  That is why I designed this football game card using HTML, CSS, and JavaScript via AlpineJS.  I took heavy inspiration from the [Smitty Officials Apparel game card](https://smittyapparel.com/collections/game-cards-holders/products/acs536-throwaway-game-card-25-per-set).  Some things on this card I saw as unnesseccary and others things I believed should be added; hence, this is why I designed my own version of the game card.
+
+This game card is designed specifically for [NIRSA flag football](https://play.nirsa.net/flag-football).  However, this card can be adapted to fit your league's rules.  Feel free to fork the project and make necessary changes.
