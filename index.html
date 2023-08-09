@@ -213,7 +213,7 @@
         <!-- START: Team Captains -->
         <table
           x-data="{ captains: ['cap', 'alt'] }"
-          class="flex flex-col space-y-1">
+          class="flex flex-col space-y-1.5">
           <template x-for="captain in captains">
             <tr
               class="flex flex-row space-x-1"
@@ -256,8 +256,7 @@
         <!-- START: Timeouts -->
         <div
           x-data
-          class="flex flex-col space-y-3 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
-          <!-- TODO: Combine first and second half timeouts using x-for (deal with template element) -->
+          class="flex flex-col space-y-1.5 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
           <!-- START: First Half Timeouts -->
           <div class="flex flex-row space-x-1">
             <h2>
@@ -297,57 +296,6 @@
           <!-- END: Second Half Timeouts -->
         </div>
         <!-- END: Timeouts -->
-
-        <!-- START: Game Information -->
-        <div
-          class="flex flex-col space-y-2 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
-          <!-- START: Date and Times -->
-          <div class="flex flex-col space-y-1">
-            <div class="flex flex-row space-x-1">
-              <div class="flex flex-row space-x-1">
-                <label for="date">DATE</label>
-                <input
-                  id="date"
-                  type="text"
-                  pattern="^(([0-9])|([0-2][0-9])|([3][0-1])) (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec) \d{4}$"
-                  spellcheck="false"
-                  class="!w-[5rem] text-center !uppercase" />
-              </div>
-              <div class="flex flex-row space-x-1">
-                <label for="start">START</label>
-                <input
-                  id="start"
-                  type="text"
-                  pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
-                  spellcheck="false"
-                  class="text-center !uppercase" />
-              </div>
-              <div class="flex flex-row space-x-1">
-                <label for="end">END</label>
-                <input
-                  id="end"
-                  type="text"
-                  pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
-                  spellcheck="false"
-                  class="text-center !uppercase" />
-              </div>
-            </div>
-          </div>
-          <!-- END: Date and Times -->
-
-          <!-- START: Game Notes -->
-          <div class="flex flex-row space-x-1">
-            <label for="date"
-              >GAME <br />
-              NOTES</label
-            >
-            <textarea
-              id="date"
-              class="scrollbar-hide !h-14 resize-none !normal-case"></textarea>
-          </div>
-          <!-- END: Game Notes -->
-        </div>
-        <!-- END: Game Information -->
 
         <!-- START: Scoring Record -->
         <div class="flex flex-col space-y-0.5">
@@ -442,7 +390,7 @@
         <!-- START: Unsportsmanlike Conducts -->
         <div
           x-data
-          class="flex flex-col space-y-3 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
+          class="flex flex-col space-y-1.5 border-2 border-black px-[3px] pt-[3px] pb-[2px]">
           <div class="flex flex-row space-x-1 font-mono font-medium">
             <h2>UNSPORTSMANLIKES</h2>
             <div
@@ -460,8 +408,55 @@
               </template>
             </div>
           </div>
+
+          <!-- START: Game Notes -->
+          <div class="flex flex-row space-x-1">
+            <label for="game-notes">GAME<br />NOTES</label>
+            <textarea
+              id="game-notes"
+              class="scrollbar-hide !h-14 resize-none !normal-case"></textarea>
+          </div>
+          <!-- END: Game Notes -->
         </div>
         <!-- END: Unsportsmanlike Conducts -->
+
+        <!-- START: Game Information -->
+        <div class="flex flex-col space-y-2 pt-[3px] pb-[2px]">
+          <!-- START: Date and Times -->
+          <div class="flex flex-col space-y-1">
+            <div class="flex flex-row space-x-1">
+              <div class="flex flex-row space-x-1">
+                <label for="date" class="text-[0.6rem]">DATE</label>
+                <input
+                  id="date"
+                  type="text"
+                  pattern="^(([0-9])|([0-2][0-9])|([3][0-1])) (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec) \d{4}$"
+                  spellcheck="false"
+                  class="!w-[5rem] text-center !uppercase" />
+              </div>
+              <div class="flex flex-row space-x-1">
+                <label for="start" class="text-[0.6rem]">START</label>
+                <input
+                  id="start"
+                  type="text"
+                  pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
+                  spellcheck="false"
+                  class="text-center !uppercase" />
+              </div>
+              <div class="flex flex-row space-x-1">
+                <label for="end" class="text-[0.6rem]">END</label>
+                <input
+                  id="end"
+                  type="text"
+                  pattern="((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))"
+                  spellcheck="false"
+                  class="text-center !uppercase" />
+              </div>
+            </div>
+          </div>
+          <!-- END: Date and Times -->
+        </div>
+        <!-- END: Game Information -->
 
         <!-- START: Credit -->
         <h3 class="mx-auto flex w-max flex-col space-y-0.5">
