@@ -1201,6 +1201,10 @@ input::-webkit-outer-spin-button,
   height: 6rem;
 }
 
+.\!h-16{
+  height: 4rem !important;
+}
+
 .max-h-\[4\.9in\]{
   max-height: 4.9in;
 }
